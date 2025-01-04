@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RUBYAI</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+
+        <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+        
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" sizes="any">
+        
+        <link rel="manifest" href="/manifest.json">
+
+        <meta name="application-name" content="Multi AI">
+        <meta name="apple-mobile-web-app-title" content="Multi AI">
+        
+        <meta name="msapplication-TileColor" content="#18181B">
+        <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
+        
+        <meta name="theme-color" content="#18181B">
+        
+                  <link rel="canonical" href="https://multi-ai.pro/model/img2prompt">
+                
+        <link rel="stylesheet" href="https://multi-ai.pro/css/style.min.css?v=1724156958">
+    </head>
+    <body class="theme-dark chain-sol">
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/93495221" style="position:absolute; left:-9999px;" alt="#">
+            </div>
+        </noscript>
+        <div class="site-preloader">
+            <div class="site-preloader__wrapper">
+                <div class="site-preloader__gif">
+                    <img src="https://multi-ai.pro/img/ters.gif?v=1" alt="" style="width: 200px; height: 100px; object-fit: contain;">
+                </div>
+                <svg style="display:none;" class="site-preloader__logo animation animation-preloaderGem" viewBox="0 0 64 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group 2871872">
+                    <g id="gem">
+                    <g id="Vector 705">
+                    <path d="M5.4507 14.9952L32.0607 58.2365L20.7515 14.9952H5.4507Z" fill="#FF0000" fill-opacity="0.1"/>
+                    <path d="M32.0607 1.0249L5.4507 14.9952H20.7515L32.0607 1.0249Z" fill="#FF0000" fill-opacity="0.4"/>
+                    <path d="M32.0607 14.9952V1.0249L20.7515 14.9952H32.0607Z" fill="#FF0000" fill-opacity="0.8"/>
+                    <path d="M43.37 14.9952L32.0607 1.0249V14.9952H43.37Z" fill="#FF0000" fill-opacity="0.8"/>
+                    <path d="M32.0607 58.2365L43.37 14.9952H32.0607V58.2365Z" fill="#FF0000" fill-opacity="0.7"/>
+                    <path d="M20.7515 14.9952L32.0607 58.2365V14.9952H20.7515Z" fill="#FF0000" fill-opacity="0.7"/>
+                    <path d="M58.6708 14.9952L45.3658 8.01004L32.0607 1.0249L43.37 14.9952H58.6708Z" fill="#FF0000" fill-opacity="0.4"/>
+                    <path d="M32.0607 58.2365L58.6708 14.9952H43.37L32.0607 58.2365Z" fill="#FF0000" fill-opacity="0.1"/>
+                    </g>
+                    <path id="Vector 705 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M32.0615 0.799316L58.8305 14.853L63.5615 27.0185L32.0615 58.5185L0.561523 27.0185L5.29256 14.853L32.0615 0.799316ZM5.49196 15.4416L1.02793 26.9205L31.0007 56.8932L5.49196 15.4416ZM33.1224 56.8932L63.0951 26.9205L58.6311 15.4416L33.1224 56.8932ZM57.8621 14.7954L32.8254 1.65118L43.466 14.7954H57.8621ZM42.9525 14.7954L32.2611 1.58845V14.7954H42.9525ZM31.8619 14.7954V1.58845L21.1706 14.7954H31.8619ZM21.0107 15.1946H31.8619V56.6845L21.0107 15.1946ZM20.5982 15.1946L31.5296 56.9911L5.80864 15.1946H20.5982ZM6.26097 14.7954H20.657L31.2976 1.65118L6.26097 14.7954ZM32.5935 56.9911L58.3144 15.1946H43.5249L32.5935 56.9911ZM43.1123 15.1946H32.2611V56.6845L43.1123 15.1946Z" fill="#FF0000"/>
+                    </g>
+                    </g>
+                </svg>
+                <div class="site-preloader__loader">
+                    <div class="site-preloader__text">0%</div>
+                    <div class="site-preloader__bar"></div>
+                </div>
+            </div>
+            <div class="powered-by">
+                <div class="powered-by__text text-dash">Powered by</div>
+                <svg class="powered-by__img" viewBox="0 0 512 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group">
+                    <path class="powered-by__svg-text" id="nvidia" d="M312.805 18.3943V82.232H330.82V18.3943H312.805ZM171.063 18.2861V82.1779H189.241V32.5685L203.415 32.6226C208.068 32.6226 211.314 33.7587 213.532 36.139C216.399 39.1686 217.535 44.0917 217.535 53.0182V82.1779H235.172V46.9049C235.172 21.6944 219.104 18.2861 203.415 18.2861H171.063ZM341.856 18.3943V82.232H371.07C386.651 82.232 391.736 79.6352 397.2 73.8466C401.096 69.7891 403.584 60.8085 403.584 51.0165C403.584 42.0359 401.474 34.0292 397.741 29.052C391.141 20.1255 381.511 18.3943 367.121 18.3943H341.856ZM359.709 32.2439H367.446C378.698 32.2439 385.948 37.2751 385.948 50.3673C385.948 63.4594 378.698 68.5448 367.446 68.5448H359.709V32.2439ZM286.837 18.3943L271.797 68.9776L257.407 18.3943H237.931L258.489 82.232H284.457L305.231 18.3943H286.837ZM412.024 82.232H430.039V18.3943H412.024V82.232ZM462.553 18.3943L437.397 82.1779H455.141L459.145 70.8711H488.899L492.686 82.1238H512L486.627 18.3943H462.553ZM474.238 30.0258L485.167 59.8888H462.986L474.238 30.0258Z" fill="#A3A3A4"/>
+                    <path id="Vector" d="M54.803 28.9975V20.2333C55.6686 20.1792 56.5342 20.1251 57.3998 20.1251C81.4201 19.3677 97.1631 40.7912 97.1631 40.7912C97.1631 40.7912 80.1758 64.3787 61.9442 64.3787C59.5097 64.3787 57.1293 64 54.8571 63.2426V36.6255C64.2164 37.7616 66.1099 41.8732 71.6822 51.2325L84.1792 40.7371C84.1792 40.7371 75.0363 28.7811 59.672 28.7811C58.049 28.727 56.426 28.8352 54.803 28.9975ZM54.803 0V13.0921L57.3998 12.9298C90.7794 11.7937 112.582 40.3043 112.582 40.3043C112.582 40.3043 87.5875 70.7084 61.5655 70.7084C59.2933 70.7084 57.0752 70.492 54.8571 70.1133V78.2282C56.6965 78.4446 58.59 78.6069 60.4294 78.6069C84.6661 78.6069 102.194 66.2181 119.182 51.6112C121.995 53.8833 133.518 59.3474 135.899 61.7278C119.777 75.2527 82.1775 86.1268 60.8622 86.1268C58.8064 86.1268 56.8588 86.0186 54.9112 85.8022V97.2172H146.989V0H54.803ZM54.803 63.2426V70.1674C32.4057 66.164 26.1843 42.847 26.1843 42.847C26.1843 42.847 36.9501 30.9451 54.803 28.9975V36.5714H54.7489C45.3897 35.4353 38.0321 44.1995 38.0321 44.1995C38.0321 44.1995 42.1978 58.9687 54.803 63.2426ZM15.0397 41.8732C15.0397 41.8732 28.2942 22.2891 54.8571 20.2333V13.0921C25.4269 15.4725 0 40.3584 0 40.3584C0 40.3584 14.3905 82.0152 54.803 85.8022V78.2282C25.1564 74.5495 15.0397 41.8732 15.0397 41.8732Z" fill="#76B900"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <header class="site-header" data-aos="fade-down" data-aos-duration="2000">
+            <div class="container">
+                <div class="site-header__wrapper">
+                    <div class="site-header__logo">
+                        <a href="/">
+                            <svg class="ui-svg-icon" width="143" height="44" viewBox="0 0 143 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Group 2871823">
+                                    <g class="white-fill-color" id="Ruby" fill="#fff">
+                                        <g id="RUBYAI">
+                                        <path d="M64.1787 28.7994V16.8794H66.2587L70.7227 22.9434H69.7307L74.0987 16.8794H76.1787V28.7994H73.9867V19.3594L74.8347 19.5674L70.3067 25.5994H70.0507L65.6347 19.5674L66.3547 19.3594V28.7994H64.1787Z"/>
+                                        <path d="M86.052 28.9914C85.1346 28.9914 84.3186 28.7994 83.604 28.4154C82.9 28.0314 82.3453 27.5034 81.94 26.8314C81.5346 26.1594 81.332 25.3967 81.332 24.5434V16.8794H83.508V24.4314C83.508 24.9221 83.6146 25.3647 83.828 25.7594C84.052 26.1541 84.356 26.4634 84.74 26.6874C85.124 26.9007 85.5613 27.0074 86.052 27.0074C86.5533 27.0074 86.9906 26.9007 87.364 26.6874C87.748 26.4634 88.0466 26.1541 88.26 25.7594C88.484 25.3647 88.596 24.9221 88.596 24.4314V16.8794H90.772V24.5434C90.772 25.3967 90.5693 26.1594 90.164 26.8314C89.7586 27.5034 89.1986 28.0314 88.484 28.4154C87.78 28.7994 86.9693 28.9914 86.052 28.9914Z"/>
+                                        <path d="M95.9443 28.7994V16.8794H98.1203V26.8794H103.224V28.7994H95.9443Z"/>
+                                        <path d="M108.791 28.7994V18.7994H105.703V16.8794H114.023V18.7994H110.983V28.7994H108.791Z"/>
+                                        <path d="M118.351 28.7994V16.8794H120.527V28.7994H118.351Z"/>
+                                        </g>
+                                    </g>
+                                    <g class="white-fill-black" id="ai" fill="#F32525">
+                                        <g id="RUBYAI_2">
+                                            <path d="M124.844 28.7193L128.956 16.7993H131.772L135.884 28.7193H133.516L132.668 26.1593H128.06L127.196 28.7193H124.844ZM128.684 24.2393H132.044L130.06 18.3033H130.668L128.684 24.2393Z"/>
+                                            <path d="M140.21 28.7193V16.7993H142.386V28.7193H140.21Z"/>
+                                        </g>
+                                    </g>
+                                    <g id="gem">
+                                        <g id="Vector 705">
+                                            <path d="M3.65663 11.3595L23.5081 43.6182L15.0712 11.3595H3.65663Z" fill="#FF0000" fill-opacity="0.1"/>
+                                            <path d="M23.5081 0.9375L3.65663 11.3595H15.0712L23.5081 0.9375Z" fill="#FF0000" fill-opacity="0.4"/>
+                                            <path d="M23.5081 11.3595V0.9375L15.0712 11.3595H23.5081Z" fill="#FF0000" fill-opacity="0.8"/>
+                                            <path d="M31.945 11.3595L23.5081 0.9375V11.3595H31.945Z" fill="#FF0000" fill-opacity="0.8"/>
+                                            <path d="M23.5081 43.6182L31.945 11.3595H23.5081V43.6182Z" fill="#FF0000" fill-opacity="0.7"/>
+                                            <path d="M15.0712 11.3595L23.5081 43.6182V11.3595H15.0712Z" fill="#FF0000" fill-opacity="0.7"/>
+                                            <path d="M43.3596 11.3595L33.4339 6.14852L23.5081 0.9375L31.945 11.3595H43.3596Z" fill="#FF0000" fill-opacity="0.4"/>
+                                            <path d="M23.5081 43.6182L43.3596 11.3595H31.945L23.5081 43.6182Z" fill="#FF0000" fill-opacity="0.1"/>
+                                        </g>
+                                        <path id="Vector 705 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M23.5083 0.769531L43.4784 11.2538L47.0078 20.3295L23.5083 43.829L0.00878906 20.3295L3.53822 11.2538L23.5083 0.769531ZM3.68697 11.6929L0.356739 20.2563L22.7169 42.6164L3.68697 11.6929ZM24.2997 42.6164L46.6598 20.2563L43.3296 11.6929L24.2997 42.6164ZM42.7559 11.2108L24.0782 1.40504L32.0162 11.2108H42.7559ZM31.6331 11.2108L23.6572 1.35824V11.2108H31.6331ZM23.3594 11.2108V1.35824L15.3835 11.2108H23.3594ZM15.2642 11.5086H23.3594V42.4607L15.2642 11.5086ZM14.9564 11.5086L23.1114 42.6895L3.92322 11.5086H14.9564ZM4.26067 11.2108H15.0004L22.9384 1.40504L4.26067 11.2108ZM23.9051 42.6895L43.0933 11.5086H32.0601L23.9051 42.6895ZM31.7523 11.5086H23.6572V42.4607L31.7523 11.5086Z" fill="#FF0000"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                                            <!-- <ul class="site-header__menu">
+                            <li class="site-header__menu-item"><a href="/" class="mainpage">Main page</a></li>
+                        </ul> -->
+                                        <div class="site-header__control">
+                        <div class="site-header__btn theme-btn ui-btn-icon">
+                            <svg class="ui-svg-icon theme-white-hide" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.6733" cy="10.0425" r="4.5083"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7012 0.321289C10.9773 0.321289 11.2012 0.545147 11.2012 0.821289V3.90039C11.2012 4.17653 10.9773 4.40039 10.7012 4.40039C10.425 4.40039 10.2012 4.17653 10.2012 3.90039V0.821289C10.2012 0.545147 10.425 0.321289 10.7012 0.321289Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.63423 3.00289C3.82949 2.80763 4.14608 2.80763 4.34134 3.00289L6.51859 5.18015C6.71385 5.37541 6.71385 5.69199 6.51859 5.88725C6.32333 6.08251 6.00675 6.08251 5.81149 5.88725L3.63423 3.71C3.43897 3.51474 3.43897 3.19815 3.63423 3.00289ZM17.7124 3.00289C17.9077 3.19815 17.9077 3.51474 17.7124 3.71L15.5352 5.88725C15.3399 6.08251 15.0233 6.08251 14.8281 5.88725C14.6328 5.69199 14.6328 5.37541 14.8281 5.18015L17.0053 3.00289C17.2006 2.80763 17.5172 2.80763 17.7124 3.00289ZM0.838867 10.0103C0.838867 9.73412 1.06272 9.51026 1.33887 9.51026L4.41797 9.51026C4.69411 9.51026 4.91797 9.73412 4.91797 10.0103C4.91797 10.2864 4.69411 10.5103 4.41797 10.5103L1.33887 10.5103C1.06272 10.5103 0.838867 10.2864 0.838867 10.0103ZM16.6201 10.0103C16.6201 9.73412 16.844 9.51026 17.1201 9.51026L20.1992 9.51026C20.4754 9.51026 20.6992 9.73412 20.6992 10.0103C20.6992 10.2864 20.4754 10.5103 20.1992 10.5103L17.1201 10.5103C16.844 10.5103 16.6201 10.2864 16.6201 10.0103ZM6.51859 14.1967C6.71385 14.392 6.71385 14.7086 6.51859 14.9039L4.34134 17.0811C4.14608 17.2764 3.82949 17.2764 3.63423 17.0811C3.43897 16.8858 3.43897 16.5693 3.63423 16.374L5.81149 14.1967C6.00675 14.0015 6.32333 14.0015 6.51859 14.1967ZM14.8281 14.1967C15.0233 14.0015 15.3399 14.0015 15.5352 14.1967L17.7124 16.374C17.9077 16.5693 17.9077 16.8858 17.7124 17.0811C17.5172 17.2764 17.2006 17.2764 17.0053 17.0811L14.8281 14.9039C14.6328 14.7086 14.6328 14.392 14.8281 14.1967ZM10.7012 15.9312C10.9773 15.9312 11.2012 16.155 11.2012 16.4312V19.5103C11.2012 19.7864 10.9773 20.0103 10.7012 20.0103C10.425 20.0103 10.2012 19.7864 10.2012 19.5103V16.4312C10.2012 16.155 10.425 15.9312 10.7012 15.9312Z"/>
+                            </svg>
+                            <svg class="ui-svg-icon theme-white-visible" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.77306 19.5107C12.6526 19.5107 15.2825 18.1776 17.0248 15.9931C17.2825 15.6699 17.0015 15.1978 16.6031 15.275C12.0738 16.1528 7.91444 12.6189 7.91444 7.96616C7.91444 5.28605 9.32433 2.82151 11.6158 1.49451C11.969 1.28996 11.8802 0.745014 11.4788 0.66957C10.9161 0.563992 10.3452 0.510829 9.77306 0.510742C4.61994 0.510742 0.4375 4.76017 0.4375 10.0107C0.4375 15.2546 4.61337 19.5107 9.77306 19.5107Z"/>
+                            </svg>
+                        </div>
+                        <a href="https://docs.multi-ai.pro/" class="site-header__btn ui-btn ui-btn_inline hide-mob" target="_blank" onclick="ym(93495221,'reachGoal','docs'); return true;">Docs</a>
+                                                    <a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000">
+                                                    <div class="site-header__btn ui-btn ui-btn_fill ui-btn_inline hide-mob"><a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000">Buy RAI</a></div>
+                                                 </a> 
+                            <div class="wallets">
+                                <div id="pi-connect" class="wallets__btn ui-btn ui-btn_fill ui-btn_w100">Metamask</div>
+                                <div id="pi-coin-base" class="wallets__btn ui-btn ui-btn_fill ui-btn_w100" style="display:none;">Coin base</div>
+                                <div class="wallets__btn ui-btn ui-btn_fill ui-btn_w100">Wallet connect</div>
+                                <div id="pi-disconnect" class="wallets__btn ui-btn ui-btn_fill ui-btn_w100" style="display:none;">Disconnect</div>
+                                <div class="wallets__text wl3-adress"></div>
+                                <div class="wallets__text wl3-token"></div>
+                            </div>
+                                                <div class="site-header__menu-btn mob-menu-btn ui-btn-icon">
+                            <svg class="ui-svg-icon ui-btn-icon__icon" width="18" height="12" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                                <path class="line-1" d="M18 2H0V0H18V2Z"/>
+                                <path class="line-2" d="M18 7H0V5H18V7Z"/>
+                                <path class="line-3" d="M18 12H0V10H18V12Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mob-menu">
+                                                    <ul class="mob-menu__ul">
+                                <li class="mob-menu__li"><a href="/" class="mainpage">Main page</a></li>
+                            </ul>
+                                                <div class="mob-menu__row">
+                            <a href="https://docs.multi-ai.pro/" class="mob-menu__btn ui-btn" target="_blank" onclick="ym(93495221,'reachGoal','docs'); return true;">Docs</a>
+                                                            <div class="mob-menu__btn wallet-connect wallet-placeholder ui-btn ui-btn_fill"><a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000">Buy RAI</a></div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <div class="h120"></div>
+    <section class="model-head">
+        <div class="container">
+            <div class="breadcrumb breadcrumb--default" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <div class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/collection/image-to-text" itemprop="item">
+                        <span itemprop="name">Image-to-text</span>
+                    </a>
+                    <meta itemprop="position" content="0">
+                </div>
+                <div class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <p itemprop="item">
+                        <span itemprop="name">img2prompt</span>
+                    </p>
+                    <meta itemprop="position" content="1">
+                </div>
+            </div>
+            <h1 class="model-head__title ui-title">img2prompt</h1>
+            <p class="model-head__text">Create a text prompt from an image with its approximate style description and content of the visual. Great for leveling up your prompt game!</p>
+            <div class="token-hold-info">
+    <div class="token-hold-info__row">
+        <svg class="token-hold-info__ok" style="display: none;" width="12" height="12" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.4004 1.39941L4.11603 7.63202L1.40039 5.12029" stroke="#24FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="token-hold-info__bad" style="display: none;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.4004 1.69368L1.40039 10.6265M10.3665 10.6602L1.4337 1.66016" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Hold: <span class="token-hold-info__wallet tokenPlace">0</span>
+    </div>
+    <div class="token-hold-info__row">
+        Required: <span class="token-hold-info__required">5,000</span> <span class='mainColor'>$RAI</span></div>
+    <div class="token-hold-bar" data-hold="5000">
+        <div class="token-hold-bar__line" style="width: 0;"></div>
+    </div>
+</div>            <div class="model-control">
+                <div class="model-runs model-control__item">
+                    <svg class="model-control__icon ui-svg-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3219 0.75C17.5811 0.749765 14.9437 1.79642 12.9489 3.676L11.6449 4.906C11.1063 5.41302 10.5918 5.94494 10.1029 6.5H5.06586C4.76373 6.50014 4.46679 6.57851 4.20392 6.72746C3.94106 6.87642 3.72125 7.09089 3.56586 7.35L0.855864 11.864C0.794311 11.9666 0.758204 12.0825 0.750557 12.2019C0.74291 12.3213 0.763945 12.4408 0.811906 12.5504C0.859866 12.66 0.93336 12.7566 1.02625 12.832C1.11914 12.9075 1.22873 12.9596 1.34586 12.984L5.91686 13.947C5.95586 13.996 5.99886 14.043 6.04586 14.087L8.03986 15.96L9.91186 17.954C9.95586 18.001 10.0029 18.044 10.0519 18.083L11.0149 22.655C11.0396 22.772 11.0919 22.8813 11.1674 22.974C11.2429 23.0666 11.3395 23.1399 11.4491 23.1876C11.5587 23.2354 11.6781 23.2562 11.7974 23.2485C11.9167 23.2407 12.0324 23.2046 12.1349 23.143L16.6489 20.434C16.908 20.2786 17.1224 20.0588 17.2714 19.7959C17.4204 19.5331 17.4987 19.2361 17.4989 18.934V13.896C18.0546 13.4072 18.5872 12.8926 19.0949 12.354L20.3229 11.05C22.2023 9.0548 23.2486 6.41702 23.2479 3.676V2.499C23.2476 2.03504 23.0631 1.59018 22.7349 1.26221C22.4068 0.934237 21.9618 0.75 21.4979 0.75H20.3209H20.3219ZM15.9999 15.112C15.6669 15.36 15.3279 15.599 14.9819 15.83L11.5889 18.092L12.2669 21.315L15.8789 19.148C15.9158 19.1258 15.9463 19.0944 15.9675 19.0569C15.9887 19.0194 15.9998 18.9771 15.9999 18.934V15.112ZM5.90786 12.412L8.16986 9.017C8.39986 8.671 8.63986 8.332 8.88686 8H5.06586C5.02279 8.00003 4.98046 8.01118 4.94296 8.03238C4.90547 8.05358 4.87409 8.08411 4.85186 8.121L2.68486 11.733L5.90786 12.412ZM13.9779 4.768C15.6942 3.15064 17.9635 2.24993 20.3219 2.25H21.4989C21.5652 2.25 21.6288 2.27634 21.6756 2.32322C21.7225 2.37011 21.7489 2.4337 21.7489 2.5V3.676C21.7497 6.03489 20.8493 8.30498 19.2319 10.022L18.0039 11.325C16.8469 12.5533 15.5539 13.646 14.1499 14.582L10.8619 16.774L9.11886 14.916C9.10789 14.9043 9.09655 14.893 9.08486 14.882L7.22586 13.138L9.41886 9.848C10.3544 8.44513 11.4464 7.15317 12.6739 5.997L13.9779 4.768ZM17.4999 8C17.4999 8.39782 17.3418 8.77936 17.0605 9.06066C16.7792 9.34196 16.3977 9.5 15.9999 9.5C15.602 9.5 15.2205 9.34196 14.9392 9.06066C14.6579 8.77936 14.4999 8.39782 14.4999 8C14.4999 7.60218 14.6579 7.22064 14.9392 6.93934C15.2205 6.65804 15.602 6.5 15.9999 6.5C16.3977 6.5 16.7792 6.65804 17.0605 6.93934C17.3418 7.22064 17.4999 7.60218 17.4999 8ZM6.49986 21C7.39986 20.1 7.39986 18.4 6.49986 17.5C5.59986 16.6 3.89986 16.6 2.99986 17.5C1.79086 18.709 1.55486 21.401 1.50986 22.243C1.50765 22.276 1.51252 22.3091 1.52415 22.3401C1.53578 22.3711 1.5539 22.3992 1.5773 22.4226C1.60069 22.446 1.62881 22.4641 1.65978 22.4757C1.69076 22.4873 1.72386 22.4922 1.75686 22.49C2.59886 22.445 5.29086 22.209 6.49986 21Z"/>
+                    </svg>
+                    58.3k runs
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="h60"></div>
+    <section class="model-tabs">
+        <div class="container">
+            <div class="model-tabs__wrapper wrapper-flex">
+                <div class="model-tab model-tab--active" data-tab="1">
+                    <svg class="model-tab__icon ui-svg-icon-stroke" width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L15 10L1 19V1Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Demo
+                </div>
+                <div class="model-tab" data-tab="2">
+                <svg class="model-tab__icon ui-svg-icon-stroke" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 1H3C1.89543 1 1 1.89543 1 3V17C1 18.1046 1.89543 19 3 19H17C18.1046 19 19 18.1046 19 17V3C19 1.89543 18.1046 1 17 1Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 1V9L12 6L15 9V1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                    Examples
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="h60"></div>
+    <section class="model model-main-screen model--active" data-tab="1">
+        <div class="container">
+            <div class="model__wrapper wrapper-flex">
+                <div class="model__col">
+                    <div class="model__title">Input</div>
+                    <form class="model__content ajax">
+                        <input type="hidden" name="model" value="50adaf2d3ad20a6f911a8a9e3ccf777b263b8596fbd2c8fc26e8888f8a0edbb5">
+                        <div class="model__row">
+                            <img src="/model/img2prompt/gen/gaeakdwpardwrdhxzfqve6m52e/prev.jpg" class="model__file-preview"></img><br>
+                            <div class="model__input-title">image</div>
+                            <div class="model__input ui-input">
+                                <input id="file_input" class="ui-input__file" type="file" name="file" accept="image/*">
+                                <label for="file_input">
+                                    <svg class="ui-input__icon ui-svg-icon-stroke" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15 6L10 1L5 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 1V13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="ui-input__span-text">Click to select a file to input</span>
+                                </label>
+                                <div class="model__input-tip">Input prompt</div>
+                            </div>
+                        </div>
+                        <button class="model__submit ui-btn ui-btn_fill submit" type="submit" disabled>Submit</button>
+<div class="model__hold-attemp">
+    Hold at least 5,000 <a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000" target="_blank"><span class="mainColor">RAI</span></a> to use this model
+    <div class="quest">
+        <svg class="quest__img" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6201 22.814C18.1429 22.814 22.6201 18.3368 22.6201 12.814C22.6201 7.29111 18.1429 2.81396 12.6201 2.81396C7.09727 2.81396 2.62012 7.29111 2.62012 12.814C2.62012 18.3368 7.09727 22.814 12.6201 22.814ZM12.6201 24.814C19.2475 24.814 24.6201 19.4414 24.6201 12.814C24.6201 6.18654 19.2475 0.813965 12.6201 0.813965C5.9927 0.813965 0.620117 6.18654 0.620117 12.814C0.620117 19.4414 5.9927 24.814 12.6201 24.814Z" fill="#FF0000"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8327 18.812C13.022 18.7642 13.1952 18.6704 13.352 18.5308C13.5905 18.319 13.7098 18.0276 13.7102 17.6567C13.7102 17.3229 13.596 17.042 13.3683 16.8143C13.1402 16.5866 12.8593 16.4728 12.5255 16.4728C12.1863 16.4728 11.9004 16.5866 11.6673 16.8143C11.4342 17.042 11.3173 17.3229 11.3173 17.6567C11.3173 18.033 11.4381 18.3259 11.6792 18.535C11.8372 18.6725 12.0129 18.7648 12.2064 18.812H12.8327ZM15.6685 12.0495C15.9205 11.8028 16.1378 11.5104 16.3207 11.1712C16.5036 10.832 16.595 10.4372 16.5943 9.98754C16.5943 9.41526 16.4338 8.88541 16.1135 8.39805C15.7928 7.91032 15.3382 7.52479 14.7501 7.24157C14.162 6.95791 13.484 6.81592 12.7157 6.81592C11.8895 6.81592 11.166 6.98573 10.5462 7.32493C9.92611 7.66374 9.45456 8.09171 9.13118 8.60841C8.80817 9.1251 8.64648 9.63525 8.64648 10.1385C8.64648 10.3823 8.74837 10.6088 8.95212 10.818C9.15626 11.0272 9.40666 11.1318 9.70342 11.1318C10.2063 11.1318 10.5482 10.8324 10.7288 10.2334C10.9198 9.66112 11.1525 9.22816 11.428 8.93412C11.7036 8.64007 12.1327 8.49305 12.7157 8.49305C13.2139 8.49305 13.6206 8.63893 13.9359 8.93027C14.2516 9.22161 14.4086 9.57894 14.4086 10.003C14.4086 10.2202 14.3577 10.4213 14.2538 10.6069C14.1508 10.7922 14.0238 10.9604 13.8726 11.1117C13.7217 11.2626 13.4767 11.4864 13.1375 11.7831C12.7504 12.1223 12.4433 12.4149 12.2152 12.6614C11.9875 12.908 11.8042 13.1939 11.6672 13.52C11.5295 13.8461 11.4604 14.2316 11.4604 14.6765C11.4604 15.0315 11.5542 15.2989 11.7421 15.4791C11.9308 15.6594 12.1623 15.7493 12.4379 15.7493C12.9677 15.7493 13.283 15.4738 13.3833 14.9227C13.4423 14.663 13.4859 14.4813 13.5149 14.3782C13.5438 14.2749 13.5847 14.1714 13.638 14.068C13.6909 13.9646 13.7719 13.8508 13.8803 13.7261C13.9888 13.6019 14.1335 13.4576 14.3133 13.2932C14.9655 12.7105 15.4173 12.296 15.6685 12.0495Z" fill="#FF0000"/>
+        </svg>
+
+        <div class="quest__modal">Multi AI platform is completely free, but most models are only accessible to RAI token holders. If you have any questions, feel free to ask in our <a href="https://t.me/RubyAI_chat" target="_blank"><span class="mainColor">Telegram chat</span></a></div>
+    </div>
+</div>                    </form>
+                </div>
+                <div class="model__col">
+                    <div class="model__title">Output</div>
+                    <div class="model__content output">
+                        <p class="model__out-text output-item"></p>                        <div class="preloader" style="display:none;">
+                            <div class="loader"></div>
+                        </div>
+                        <div class="model-control">
+                            <a class="model-control__item model-share ui-btn ui-btn_inline" data-link="https://multi-ai.pro/model/img2prompt/gen?model=50adaf2d3ad20a6f911a8a9e3ccf777b263b8596fbd2c8fc26e8888f8a0edbb5&id=gaeakdwpardwrdhxzfqve6m52e&ex=true">
+                                <svg class="model-control__icon ui-svg-icon-stroke" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 8H10C8.89543 8 8 8.89543 8 10V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V10C21 8.89543 20.1046 8 19 8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 14H3C2.46957 14 1.96086 13.7893 1.58579 13.4142C1.21071 13.0391 1 12.5304 1 12V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Share
+                            </a>
+                            <a class="model-control__item model-download ui-btn ui-btn_inline" href="img2prompt/gen/gaeakdwpardwrdhxzfqve6m52e/gen-0.txt" target="_blank">
+                                <svg class="model-control__icon ui-svg-icon-stroke" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 8L10 13L15 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 13V1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="model" data-tab="2">
+        <div class="container">
+                        <div class="model__example-item">
+                <div class="model__wrapper wrapper-flex">
+                        <div class="model__col">
+                            <div class="model__title">Input</div>
+                                <div class="example-table">
+                                                                                                                                                                                                            <div class="example-table__row">
+                                                    <div class="example-table__title">image</div>
+                                                    <div class="example-table__text"><img src="/model/img2prompt/gen/gaeakdwpardwrdhxzfqve6m52e/prev.jpg"></div>
+                                                </div>
+                                                                                                                                                            </div>
+                        </div>
+                        <div class="model__col">
+                            <div class="model__title">Output</div>
+                            <div class="model__content output">
+                                <p class="model__out-text output-item"></p>                                <div class="preloader" style="display:none;">
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="model-control">
+                                    <a class="model-control__item model-share ui-btn ui-btn_inline" data-link="https://multi-ai.pro/model/img2prompt/gen?model=50adaf2d3ad20a6f911a8a9e3ccf777b263b8596fbd2c8fc26e8888f8a0edbb5&id=gaeakdwpardwrdhxzfqve6m52e&ex=true">
+                                        <svg class="model-control__icon ui-svg-icon-stroke" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 8H10C8.89543 8 8 8.89543 8 10V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V10C21 8.89543 20.1046 8 19 8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4 14H3C2.46957 14 1.96086 13.7893 1.58579 13.4142C1.21071 13.0391 1 12.5304 1 12V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Share
+                                    </a>
+                                    <a class="model-control__item model-download ui-btn ui-btn_inline" href="img2prompt/gen/gaeakdwpardwrdhxzfqve6m52e/gen-0.txt" target="_blank">
+                                        <svg class="model-control__icon ui-svg-icon-stroke" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 8L10 13L15 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 13V1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+                        <div class="model__example-item">
+                <div class="model__wrapper wrapper-flex">
+                        <div class="model__col">
+                            <div class="model__title">Input</div>
+                                <div class="example-table">
+                                                                                                                                                                                                            <div class="example-table__row">
+                                                    <div class="example-table__title">image</div>
+                                                    <div class="example-table__text"><img src="img2prompt/gen/364l3hbqdbfnfmyzwxlwffqvju/prev.jpeg"></div>
+                                                </div>
+                                                                                                                                                            </div>
+                        </div>
+                        <div class="model__col">
+                            <div class="model__title">Output</div>
+                            <div class="model__content output">
+                                <p class="model__out-text output-item"></p>                                <div class="preloader" style="display:none;">
+                                    <div class="loader"></div>
+                                </div>
+                                <div class="model-control">
+                                    <a class="model-control__item model-share ui-btn ui-btn_inline" data-link="https://multi-ai.pro/model/img2prompt/gen?model=50adaf2d3ad20a6f911a8a9e3ccf777b263b8596fbd2c8fc26e8888f8a0edbb5&id=364l3hbqdbfnfmyzwxlwffqvju&ex=true">
+                                        <svg class="model-control__icon ui-svg-icon-stroke" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 8H10C8.89543 8 8 8.89543 8 10V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V10C21 8.89543 20.1046 8 19 8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4 14H3C2.46957 14 1.96086 13.7893 1.58579 13.4142C1.21071 13.0391 1 12.5304 1 12V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Share
+                                    </a>
+                                    <a class="model-control__item model-download ui-btn ui-btn_inline" href="img2prompt/gen/364l3hbqdbfnfmyzwxlwffqvju/gen-0.txt" target="_blank">
+                                        <svg class="model-control__icon ui-svg-icon-stroke" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 8L10 13L15 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 13V1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+                    </div>
+    </section>
+    <div class="h80"></div>
+    <section class="model-content">
+        <div class="container">
+            <div class="model-text ui-format">
+                <h2>Readme</h2>
+                <p>Provides approximate text prompts that can be used with stable diffusion to re-create similar looking versions of the image/painting. Try it by copying the text prompts to <a href="https://multi-ai.pro/model/stable-diffusion">stable diffusion</a></p>
+            </div>
+        </div>
+    </section>
+    <div class="h160"></div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__wrapper wrapper-flex wrapper-flex_stretch">
+                    <div class="site-footer__side grid-after">
+                        <div class="site-footer__logo" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="/">
+                                <svg width="95" height="92" viewBox="0 0 95 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Group 2871865">
+                                    <g id="gem">
+                                    <g id="Vector 705">
+                                    <path d="M20.5874 14.9952L47.1975 58.2365L35.8882 14.9952H20.5874Z" fill="#FF0000" fill-opacity="0.1"/>
+                                    <path d="M47.1975 1.0249L20.5874 14.9952H35.8882L47.1975 1.0249Z" fill="#FF0000" fill-opacity="0.4"/>
+                                    <path d="M47.1975 14.9952V1.0249L35.8882 14.9952H47.1975Z" fill="#FF0000" fill-opacity="0.8"/>
+                                    <path d="M58.5067 14.9952L47.1975 1.0249V14.9952H58.5067Z" fill="#FF0000" fill-opacity="0.8"/>
+                                    <path d="M47.1975 58.2365L58.5067 14.9952H47.1975V58.2365Z" fill="#FF0000" fill-opacity="0.7"/>
+                                    <path d="M35.8882 14.9952L47.1975 58.2365V14.9952H35.8882Z" fill="#FF0000" fill-opacity="0.7"/>
+                                    <path d="M73.8075 14.9952L60.5025 8.01004L47.1975 1.0249L58.5067 14.9952H73.8075Z" fill="#FF0000" fill-opacity="0.4"/>
+                                    <path d="M47.1975 58.2365L73.8075 14.9952H58.5067L47.1975 58.2365Z" fill="#FF0000" fill-opacity="0.1"/>
+                                    </g>
+                                    <path id="Vector 705 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M47.1982 0.799316L73.9672 14.853L78.6982 27.0185L47.1982 58.5185L15.6982 27.0185L20.4293 14.853L47.1982 0.799316ZM20.6287 15.4416L16.1647 26.9205L46.1374 56.8932L20.6287 15.4416ZM48.2591 56.8932L78.2318 26.9205L73.7678 15.4416L48.2591 56.8932ZM72.9988 14.7954L47.9621 1.65118L58.6027 14.7954H72.9988ZM58.0892 14.7954L47.3978 1.58845V14.7954H58.0892ZM46.9987 14.7954V1.58845L36.3073 14.7954H46.9987ZM36.1475 15.1946H46.9987V56.6845L36.1475 15.1946ZM35.7349 15.1946L46.6663 56.9911L20.9454 15.1946H35.7349ZM21.3977 14.7954H35.7938L46.4343 1.65118L21.3977 14.7954ZM47.7302 56.9911L73.4511 15.1946H58.6616L47.7302 56.9911ZM58.249 15.1946H47.3978V56.6845L58.249 15.1946Z" fill="#FF0000"/>
+                                    </g>
+                                    <g class="white-fill-color" id="Ruby">
+                                    <path d="M0.698242 91.3106V76.5483H3.20836L8.59547 84.0582H7.39834L12.6696 76.5483H15.1797V91.3106H12.5344V79.6197L13.5578 79.8773L8.09345 87.3475H7.78451L2.45533 79.8773L3.32422 79.6197V91.3106H0.698242Z" fill="#FF0000"/>
+                                    <path d="M27.0946 91.5483C25.9876 91.5483 25.0029 91.3106 24.1404 90.835C23.2908 90.3594 22.6215 89.7055 22.1323 88.8733C21.6432 88.0411 21.3986 87.0966 21.3986 86.0398V76.5483H24.0246V85.901C24.0246 86.5087 24.1533 87.0569 24.4107 87.5457C24.6811 88.0345 25.0479 88.4176 25.5113 88.695C25.9747 88.9592 26.5025 89.0913 27.0946 89.0913C27.6996 89.0913 28.2274 88.9592 28.6779 88.695C29.1414 88.4176 29.5018 88.0345 29.7592 87.5457C30.0296 87.0569 30.1647 86.5087 30.1647 85.901V76.5483H32.7907V86.0398C32.7907 87.0966 32.5461 88.0411 32.057 88.8733C31.5678 89.7055 30.892 90.3594 30.0296 90.835C29.18 91.3106 28.2017 91.5483 27.0946 91.5483Z" fill="#FF0000"/>
+                                    <path d="M39.0327 91.3106V76.5483H41.6586V88.9328H47.8181V91.3106H39.0327Z" fill="#FF0000"/>
+                                    <path d="M54.5355 91.3106V78.9261H50.809V76.5483H60.8494V78.9261H57.1808V91.3106H54.5355Z" fill="#FF0000"/>
+                                    <path d="M66.0723 91.3106V76.5483H68.6982V91.3106H66.0723Z" fill="#FF0000"/>
+                                    </g>
+                                    <g class="white-fill-black" id="ai" fill="#fff">
+                                    <path d="M72.6982 90.5483L77.8551 76.5483H81.3866L86.5434 90.5483H83.5737L82.5102 87.5416H76.7314L75.6479 90.5483H72.6982ZM77.5139 85.2866H81.7277L79.2396 78.3148H80.0021L77.5139 85.2866Z"/>
+                                    <path d="M91.9693 90.5483V76.5483H94.6982V90.5483H91.9693Z"/>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="site-footer__text" data-aos="fade-up" data-aos-duration="1000">Hundreds of open source AI models, ready to use.</div>
+                        <div class="site-footer__media wrapper-flex" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="site-footer__col-2">
+                                <div class="site-footer__title">Follow us:</div>
+                                <div class="site-footer__links">
+                                    <a class="site-footer__link ui-btn-icon" href="https://x.com/RubyAI_Erc20" target="_blank" onclick="ym(93495221,'reachGoal','twitter'); return true;">
+                                        <svg class="ui-btn-icon__icon ui-svg-icon" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.5977 1.27437C12.1577 1.47094 11.6803 1.60199 11.1842 1.66283C11.6944 1.35862 12.0828 0.876556 12.2654 0.300893C11.788 0.581705 11.2638 0.787634 10.7022 0.899958C10.2529 0.422579 9.6117 0.123047 8.90499 0.123047C7.54773 0.123047 6.44321 1.22757 6.44321 2.58483C6.44321 2.77671 6.46193 2.96392 6.50873 3.14645C4.46349 3.04348 2.64758 2.06532 1.43541 0.572345C1.2248 0.9374 1.10312 1.35862 1.10312 1.81259C1.10312 2.66439 1.53837 3.4179 2.19828 3.86252C1.79578 3.84848 1.41669 3.73615 1.0844 3.55362V3.5817C1.0844 4.77515 1.93151 5.77203 3.05944 5.99668C2.85351 6.05284 2.63354 6.0856 2.40889 6.0856C2.24976 6.0856 2.09532 6.07156 1.94555 6.04348C2.25912 7.02164 3.16708 7.73303 4.24352 7.75175C3.40109 8.41166 2.33869 8.80479 1.18736 8.80479C0.990792 8.80479 0.794224 8.79543 0.597656 8.77203C1.68814 9.46938 2.97987 9.87656 4.36989 9.87656C8.90031 9.87656 11.3761 6.12305 11.3761 2.87032C11.3761 2.76267 11.3761 2.65503 11.3714 2.55206C11.8535 2.20105 12.27 1.77047 12.5977 1.27437Z"/>
+                                        </svg>
+                                    </a>
+                                    <div class="site-footer__link ui-btn-icon --dropdown" href="https://t.me/RubyAI_Erc20" target="_blank">
+                                        <div class="ui-btn-icon-dropdown">
+                                            <a class="ui-btn-icon-dropdown__link" href="https://t.me/RubyAI_Erc20" target="_blank" onclick="ym(93495221,'reachGoal','telegram'); return true;">Announcement Channel</a>
+                                            <a class="ui-btn-icon-dropdown__link" href="https://t.me/RubyAI_chat" target="_blank" onclick="ym(93495221,'reachGoal','telegram'); return true;">Community Chat</a>
+                                        </div>
+                                        <svg class="ui-btn-icon__icon ui-btn-icon__icon--big ui-svg-icon" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.2428 0.45668C8.76633 1.0682 2.43537 3.69056 0.686134 4.40528C-0.486986 4.86308 0.199774 5.29232 0.199774 5.29232C0.199774 5.29232 1.20117 5.63564 2.05965 5.89316C2.91801 6.15068 3.37581 5.8646 3.37581 5.8646L7.41021 3.14636C8.84085 2.17352 8.49754 2.97464 8.1541 3.31808C7.41022 4.06208 6.17985 5.23508 5.14977 6.17936C4.69197 6.57992 4.92081 6.92324 5.12121 7.09496C5.86509 7.72448 7.8967 9.01208 8.01106 9.09788C8.6155 9.5258 9.80446 10.1418 9.9853 8.84036L10.7006 4.34816C10.9296 2.83172 11.1584 1.42964 11.187 1.02908C11.2729 0.0561202 10.2428 0.45668 10.2428 0.45668Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site-footer__col-2">
+                                <div class="site-footer__title">Newsletter</div>
+                                <form class="ajax-mail" method="POST">
+                                    <div class="site-footer__input ui-input">
+                                        <input class="ui-input__text" type="mail" name="mail" placeholder="Email">
+                                        <button class="ui-input__submit" type="submit">Subscribe</button>
+                                    </div>
+                                    <div class="ui-input__error"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-footer__side">
+                        <div class="site-footer__menu-wrapper wrapper-flex">
+                            <div class="site-footer__col-3">
+                                <div class="site-footer__title color" data-aos="fade-up" data-aos-duration="1000">Tools</div>
+                                <ul class="site-footer__ul">
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/text-to-image">Text-to-image</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/text-to-animation">Text-to-animation</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/video-creating-processing">Video creating/processing</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/audio-generation">Audio generation</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/image-to-text">Image-to-text</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/language-models">Language models</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/image-processing">Image processing</a>
+                                        </li>
+                                                                            <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000">
+                                          <a href="/collection/others">Others</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                            <div class="site-footer__col-3">
+                                <div class="site-footer__title color" data-aos="fade-up" data-aos-duration="1000">Website</div>
+                                <ul class="site-footer__ul">
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#collections" class="mainpage">Collections</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#usecases" class="mainpage">Use cases</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#about" class="mainpage">About</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#tokenomics" class="mainpage">Tokenomics</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#roadmap" class="mainpage">Roadmap</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="#partners" class="mainpage">Partners</a></li>
+                                </ul>
+                            </div>
+                            <div class="site-footer__col-3">
+                                <div class="site-footer__title color" data-aos="fade-up" data-aos-duration="1000">Docs</div>
+                                <ul class="site-footer__ul">
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://docs.multi-ai.pro/" target="_blank">Whitepaper</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://bscscan.com/address/0x1591E923e0836a3949b59637FBE8959F000894B9" target="_blank">Contract</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://pinksale.notion.site/RUBYAI-KYC-Verification-0b691efaba51417786aec17a802042f3" target="_blank">KYC</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://blocksafu.com/audit/0x1591E923e0836a3949b59637FBE8959F000894B9" target="_blank">Audit</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://coinsult.net/safu_report/multi-ai/" target="_blank">SAFU</a></li>
+                                    <li class="site-footer__li" data-aos="fade-up" data-aos-duration="1000"><a href="https://www.pinksale.finance/launchpad/0x1a56fe1bfd0369e20763524fb2c191121d49e186?chain=BSC&refId=0x91f64561cbFEE743D92Ea0059f9C3a383f612791" target="_blank">Presale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-footer__control" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="site-footer__btn theme-btn ui-btn-icon">
+                                <svg class="ui-svg-icon theme-white-hide" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10.6733" cy="10.0425" r="4.5083"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7012 0.321289C10.9773 0.321289 11.2012 0.545147 11.2012 0.821289V3.90039C11.2012 4.17653 10.9773 4.40039 10.7012 4.40039C10.425 4.40039 10.2012 4.17653 10.2012 3.90039V0.821289C10.2012 0.545147 10.425 0.321289 10.7012 0.321289Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.63423 3.00289C3.82949 2.80763 4.14608 2.80763 4.34134 3.00289L6.51859 5.18015C6.71385 5.37541 6.71385 5.69199 6.51859 5.88725C6.32333 6.08251 6.00675 6.08251 5.81149 5.88725L3.63423 3.71C3.43897 3.51474 3.43897 3.19815 3.63423 3.00289ZM17.7124 3.00289C17.9077 3.19815 17.9077 3.51474 17.7124 3.71L15.5352 5.88725C15.3399 6.08251 15.0233 6.08251 14.8281 5.88725C14.6328 5.69199 14.6328 5.37541 14.8281 5.18015L17.0053 3.00289C17.2006 2.80763 17.5172 2.80763 17.7124 3.00289ZM0.838867 10.0103C0.838867 9.73412 1.06272 9.51026 1.33887 9.51026L4.41797 9.51026C4.69411 9.51026 4.91797 9.73412 4.91797 10.0103C4.91797 10.2864 4.69411 10.5103 4.41797 10.5103L1.33887 10.5103C1.06272 10.5103 0.838867 10.2864 0.838867 10.0103ZM16.6201 10.0103C16.6201 9.73412 16.844 9.51026 17.1201 9.51026L20.1992 9.51026C20.4754 9.51026 20.6992 9.73412 20.6992 10.0103C20.6992 10.2864 20.4754 10.5103 20.1992 10.5103L17.1201 10.5103C16.844 10.5103 16.6201 10.2864 16.6201 10.0103ZM6.51859 14.1967C6.71385 14.392 6.71385 14.7086 6.51859 14.9039L4.34134 17.0811C4.14608 17.2764 3.82949 17.2764 3.63423 17.0811C3.43897 16.8858 3.43897 16.5693 3.63423 16.374L5.81149 14.1967C6.00675 14.0015 6.32333 14.0015 6.51859 14.1967ZM14.8281 14.1967C15.0233 14.0015 15.3399 14.0015 15.5352 14.1967L17.7124 16.374C17.9077 16.5693 17.9077 16.8858 17.7124 17.0811C17.5172 17.2764 17.2006 17.2764 17.0053 17.0811L14.8281 14.9039C14.6328 14.7086 14.6328 14.392 14.8281 14.1967ZM10.7012 15.9312C10.9773 15.9312 11.2012 16.155 11.2012 16.4312V19.5103C11.2012 19.7864 10.9773 20.0103 10.7012 20.0103C10.425 20.0103 10.2012 19.7864 10.2012 19.5103V16.4312C10.2012 16.155 10.425 15.9312 10.7012 15.9312Z"/>
+                                </svg>
+                                <svg class="ui-svg-icon theme-white-visible" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.77306 19.5107C12.6526 19.5107 15.2825 18.1776 17.0248 15.9931C17.2825 15.6699 17.0015 15.1978 16.6031 15.275C12.0738 16.1528 7.91444 12.6189 7.91444 7.96616C7.91444 5.28605 9.32433 2.82151 11.6158 1.49451C11.969 1.28996 11.8802 0.745014 11.4788 0.66957C10.9161 0.563992 10.3452 0.510829 9.77306 0.510742C4.61994 0.510742 0.4375 4.76017 0.4375 10.0107C0.4375 15.2546 4.61337 19.5107 9.77306 19.5107Z"/>
+                                </svg>
+                            </div>
+                            <a href="https://t.me/RubyAI_Erc20" class="site-footer__btn ui-btn ui-btn_inline" target="_blank" onclick="ym(93495221,'reachGoal','telegram'); return true;">Join Community</a>
+                                                            <div onclick="connectWallet();" class="site-footer__btn wallet-placeholder ui-btn ui-btn_fill ui-btn_inline hide-mob"><a href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0x00000000000000000000000000000000000000">Buy RAI</a></div>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="site-footer__policy">
+                    Copyright © 2023 RUBYAI. - All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <div class="ui-float-select ui-cross-parent" style="display: none;">
+            <div class="ui-cross ui-cross--black">
+                <svg focusable="false" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+            </div>
+            <div class="container">
+                <div class="ui-float-select__title">Сортировать по:</div>
+                <div class="ui-float-select__menu">
+                    <div class="ui-float-select__item">Price (High to Low)</div>
+                    <div class="ui-float-select__item">Price (Low to High)</div>
+                    <div class="ui-float-select__item">Release date (Oldest First)</div>
+                    <div class="ui-float-select__item">Release date (Newest First)</div>
+                    <div class="ui-float-select__item">Runs (High to Low)</div>
+                    <div class="ui-float-select__item">Runs (Low to High)</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-popup ui-cross-parent modal-wallets" style="display: none;">
+            <div class="ui-popup__wrapper">
+                <div class="ui-cross">
+                    <svg focusable="false" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" data-testid="CloseIcon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
+                <div class="wallet-connect-btns">
+                    <div class="wallet-connect-btns__wrapper">
+                        <button class="ui-btn ui-btn_fill ui-btn_w100 type-walletconnect">
+                            <svg class="ui-btn__icon" width="89" height="55" viewBox="0 0 89 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.18 10.6275C32.66 -3.54249 56.13 -3.54249 70.61 10.6275L72.35 12.3375C73.07 13.0475 73.07 14.1975 72.35 14.9075L66.39 20.7375C66.03 21.0875 65.44 21.0875 65.08 20.7375L62.68 18.3875C52.58 8.50751 36.2 8.50751 26.1 18.3875L23.53 20.8975C23.17 21.2475 22.58 21.2475 22.22 20.8975L16.26 15.0675C15.54 14.3575 15.54 13.2075 16.26 12.4975L18.17 10.6275H18.18ZM82.94 22.6875L88.24 27.8775C88.96 28.5875 88.96 29.7375 88.24 30.4475L64.32 53.8575C63.6 54.5675 62.42 54.5675 61.7 53.8575L44.72 37.2475C44.54 37.0675 44.25 37.0675 44.06 37.2475L27.08 53.8575C26.36 54.5675 25.18 54.5675 24.46 53.8575L0.54 30.4475C-0.18 29.7375 -0.18 28.5875 0.54 27.8775L5.84 22.6875C6.56 21.9775 7.74 21.9775 8.46 22.6875L25.44 39.2975C25.62 39.4775 25.91 39.4775 26.1 39.2975L43.08 22.6875C43.8 21.9775 44.98 21.9775 45.7 22.6875L62.68 39.3075C62.86 39.4875 63.15 39.4875 63.34 39.3075L80.32 22.6975C81.04 21.9875 82.22 21.9875 82.94 22.6975V22.6875Z" fill="white"/>
+                            </svg>
+                            <span>WalletConnect</span>
+                        </button>
+                        <button class="ui-btn ui-btn_fill ui-btn_w100 type-phantom">
+                            <svg class="ui-btn__icon" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 25.219C0 29.105 2.065 30 4.213 30C8.757 30 12.173 26.002 14.21 22.843C13.962 23.541 13.824 24.24 13.824 24.912C13.824 26.757 14.871 28.071 16.936 28.071C19.773 28.071 22.802 25.554 24.372 22.842C24.262 23.234 24.207 23.597 24.207 23.932C24.207 25.219 24.923 26.03 26.382 26.03C30.982 26.03 35.608 17.782 35.608 10.568C35.608 4.948 32.798 0 25.748 0C13.357 0 0 15.322 0 25.219ZM21.48 9.953C21.48 8.555 22.251 7.577 23.38 7.577C24.482 7.577 25.253 8.555 25.253 9.953C25.253 11.351 24.483 12.358 23.381 12.358C22.251 12.358 21.481 11.351 21.481 9.953H21.48ZM27.374 9.953C27.374 8.555 28.144 7.577 29.274 7.577C30.375 7.577 31.146 8.555 31.146 9.953C31.146 11.351 30.376 12.358 29.274 12.358C28.144 12.358 27.374 11.351 27.374 9.953Z" fill="white"/>
+                            </svg>
+                            <span>Phantom</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://multi-ai.pro/js/app.min.js?v=1724855501"></script>
+        <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+
+                    <script type="module" src="https://multi-ai.pro/js/web3web.js?v=1709361129"></script>
+        
+        <!-- Yandex.Metrika counter --> 
+        <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(93495221, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });</script>
+        <!-- /Yandex.Metrika counter -->
+    </body>
+</html>
